@@ -1,5 +1,6 @@
 package net.smktarunabhakti.penjualan.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
@@ -12,18 +13,20 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="trx_jual_detail")
-public class PenjualanDetail {
+@Table(name = "trx_jual_detail")
+public class PenjualanDetail implements Serializable{
+	
 	@Id
-	@GeneratedValue(generator = "system-uuid")
-	@GenericGenerator(name = "system-uuid" , strategy = "uuid2")
+	@GeneratedValue(generator= "system-uuid")
+	@GenericGenerator(name = "system-uuid", strategy = "uuid2")
 	private String id;
 	
 	@ManyToOne
-	private Penjualan header;
+	private Penjualan Header;
 	
 	@ManyToOne
 	private Barang barang;
+	
 	
 	@Column(name="jumlah_barang")
 	private int jumlah;
