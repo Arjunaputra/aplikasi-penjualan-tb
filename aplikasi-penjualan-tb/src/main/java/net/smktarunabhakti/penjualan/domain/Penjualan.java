@@ -1,3 +1,8 @@
+/*
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
 package net.smktarunabhakti.penjualan.domain;
 
 import java.io.Serializable;
@@ -16,7 +21,10 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
 
-
+/**
+*
+* @author jimmy
+*/
 @Entity
 @Table(name = "trx_jual_header")
 public class Penjualan implements Serializable {
